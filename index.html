@@ -23,16 +23,21 @@
     .social-link {
       color: blue;
     }
+    .social-list {
+      list-style: none;
+      padding: 0;
+    }
+    .social-list > li {
+      display: inline-block;
+    }
 
     /* BIO STYLES */
     .bio-box {
       border: 10px solid black;
-      float: left;
     }
 
     .bio-copy a {
       color: green;
-      float: right;
     }
   </style>
 </head>
@@ -40,7 +45,7 @@
 <body>
   <div class="social-link">
     <h1>I'm an h1</h1>
-    <ul>
+    <ul class="social-list">
       <li>
         <a href="https://example.com/">Link</a>
       </li>
