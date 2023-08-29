@@ -11,6 +11,14 @@
     color: #f00;
   }
 
+  h2+p {
+    font-size: 0.8em;
+    font-style: italic;
+    margin: 1em auto 0;
+    max-width: 70%;
+    text-align: center;
+  }
+
   /* HEADER STYLES */
   .header-nav {
     float: right;
@@ -34,9 +42,28 @@
   .header-nav a:active {
     color: #ed6e2f;
   }
+
+  .header-nav>li {
+    display: inline-block;
+    margin-left: 1em;
+  }
+
+  .header-nav>li~li {
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    padding-left: 1em;
+  }
+
   .header-logo:hover,
   .header-logo:active {
     opacity: 0.5;
+  }
+
+  .header-nav>li:first-child a {
+    color: #ed6e2f;
+  }
+
+  .header-nav>li:first-child a:hover {
+    color: #000;
   }
 
   /* HERO STYLES */
@@ -69,6 +96,7 @@
     background-color: white;
     color: black;
   }
+
   .social-link a:hover,
   .social-link a:hover {
     background-color: white;
@@ -157,7 +185,14 @@
       </li>
     </ul>
   </div>
-  <h2>I'm an h2</h2>
+  <h2>THE FOUNDERS</h2>
+  <p>
+    Learn Enough to Be Dangerous was founded in 2015 by Michael Hartl, Lee Donahoe,
+    and Nick Merwin. We believe that the kind of technical sophistication taught by
+    the Learn Enough tutorials can benefit at least a billion people, and probably
+    more.
+  </p>
+  <p>Test paragraph</p>
   <div class="bio-wrapper">
     <div class="bio-box">
       <img src="https://placekitten.com/g/400/400">
