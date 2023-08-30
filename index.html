@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <style>
-  /* GLOBAL STYLES *//* #region */
+  /* GLOBAL STYLES */
+  /* #region */
   h1 {
     font-size: 7vw;
     margin-top: 0;
@@ -11,24 +12,27 @@
     color: #f00;
   }
 
-  h2+p {
+  h2~p {
     font-size: 0.8em;
     font-style: italic;
     margin: 1em auto 0;
     max-width: 70%;
     text-align: center;
   }
+
   /* #endregion */
 
-  /* HEADER STYLE *//* #region */
+  /* HEADER STYLE */
+  /* #region */
   .header {
-    background-color: #aaa;
-    height: 100px;
-    width: 100%;
+    background-color: #000;
+    color: #fff;
   }
+
   /* #endregion */
 
-  /* HEADER NAV *//* #region */
+  /* HEADER NAV */
+  /* #region */
   .header-nav {
     float: right;
     padding: 5.5vh 60px 0 0;
@@ -40,7 +44,7 @@
   }
 
   .header-nav a {
-    color: #000;
+    color: #fff;
     font-size: 0.8rem;
     font-weight: bold;
     text-decoration: none;
@@ -57,40 +61,51 @@
   }
 
   .header-nav>li:first-child a:hover {
-    color: #000;
+    color: #fff;
   }
 
   .header-nav>li~li {
-    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
     padding-left: 1em;
   }
+
   /* #endregion */
 
-  /* HEADER LOGO *//* #region */
+  /* HEADER LOGO */
+  /* #region */
   .header-logo {
     background-color: #000;
-    height: 110px;
-    width: 110px;
-    left: 50%;
-    top: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    display: block;
+    height: 10vh;
+    padding-top: 10px;
+    position: relative;
+    text-align: center;
+    width: 10vh;
   }
 
   .header-logo:hover,
   .header-logo:active {
-    opacity: 0.5;
+    background-color: #ed6e2f;
   }
+
+  .header-logo img {
+    width: 4.3vh;
+  }
+
   /* #endregion */
 
-  /* FULL HERO *//* #region */
+  /* FULL HERO */
+  /* #region */
   .full-hero {
     background-color: #c7dbfc;
     height: 50vh;
   }
+
   /* #endregion */
 
-  /* SOCIAL LINK *//* #region */
+  /* SOCIAL LINK */
+  /* #region */
   .social-link {
     background: rgba(150, 150, 150, 0.5);
     border-radius: 99px;
@@ -114,9 +129,11 @@
     background-color: white;
     color: black;
   }
+
   /* #endregion */
-  
-  /* SOCIAL LIST *//* #region */
+
+  /* SOCIAL LIST */
+  /* #region */
   .social-list a:hover,
   .social-list a:active {
     background-color: white;
@@ -133,18 +150,22 @@
     display: inline-block;
     margin: 0 0.5em;
   }
+
   /* #endregion */
 
-  /* BIO WRAPPER *//* #region */
+  /* BIO WRAPPER */
+  /* #region */
   .bio-wrapper {
     font-size: 24px;
     margin: auto;
     max-width: 960px;
     overflow: hidden;
   }
+
   /* #endregion */
-  
-  /* BIO BOX *//* #region */
+
+  /* BIO BOX */
+  /* #region */
   .bio-box {
     border: 1px solid black;
     box-sizing: border-box;
@@ -165,10 +186,11 @@
   .bio-box img {
     width: 100%;
   }
+
   /* #endregion */
 
-  /* BIO COPY *//* #region  */
-  
+  /* BIO COPY */
+  /* #region  */
   .bio-copy {
     font-size: 1em;
     line-height: 1.5;
@@ -177,8 +199,8 @@
   .bio-copy a {
     color: green;
   }
-  /* #endregion*/
 
+  /* #endregion*/
 </style>
 <header class="header">
   <nav>
@@ -189,7 +211,8 @@
       <li><a href="#">Nav 3</a></li>
     </ul>
   </nav>
-  <a href="/" class="header-logo">Logo</a>
+  <a href="/" class="header-logo">
+    <img src="/logo.png" alt="Learn Enough" </a>
 </header>
 
 <head>
