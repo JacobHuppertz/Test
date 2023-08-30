@@ -111,8 +111,32 @@
   }
 
   .hero-home {
-    background-image: url(/images/shark.jpg);
+    background-image: url(https://i.pinimg.com/originals/cf/c5/59/cfc559ab199e69cf6c29ca8a4fb9f384.jpg);
+    background-position: center top;
   }
+
+  .hero-content {
+  color: #fff;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  top: 10%;
+  transform: translate(0, -10%);
+}
+.hero-content h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 7vw;
+  margin-bottom: 0.25em;
+}
+.hero-content .social-link {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #557c83;
+}
+.hero-content .social-link:hover {
+  background-color: #000;
+  color: #fff;
+}
+
   /* #endregion*/
 
   /* #region NAV LINKS*/
@@ -284,18 +308,20 @@
 <body>
   <!--#region SOCIAL LIST-->
   <div class="full-hero hero-home">
-    <h1>I'm an h1</h1>
-    <ul class="social-list">
-      <li>
-        <a href="https://example.com/" class="social-link">Fb</a>
-      </li>
-      <li>
-        <a href="https://example.com/" class="social-link">Tw</a>
-      </li>
-      <li>
-        <a href="https://example.com/" class="social-link">Gh</a>
-      </li>
-    </ul>
+    <div class="hero-content">
+      <h1>CODE DANGEROUSLY</h1>
+      <ul class="social-list">
+        <li>
+          <a href="https://example.com/" class="social-link">Fb</a>
+        </li>
+        <li>
+          <a href="https://example.com/" class="social-link">Tw</a>
+        </li>
+        <li>
+          <a href="https://example.com/" class="social-link">Gh</a>
+        </li>
+      </ul>
+    </div>
   </div>
   <!--#endregion-->
 
