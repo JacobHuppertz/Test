@@ -2,9 +2,11 @@
 <html>
 <style>
   /* #region GLOBAL STYLES*/
+
+
   html {
-    box-shadow: 0 0 0 30px #000 inset;
-    padding: 0 30px;
+    box-shadow: 0 0 0 25px #000 inset;
+    padding: 0 5px;
   }
 
   h1 {
@@ -13,8 +15,16 @@
     color: black;
   }
 
+  h2 {
+    font-size: 2em;
+  }
+
   a {
     color: #f00;
+  }
+
+  p {
+    line-height: 1.5;
   }
 
   h2~p {
@@ -110,32 +120,47 @@
     padding-top: 10vh;
   }
 
+  .full-hero:after {
+    bottom: 2vh;
+    border: 10px solid;
+    border-color: #fff transparent transparent;
+    content: "";
+    height: 0;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0);
+    width: 0;
+  }
+
   .hero-home {
     background-image: url(https://i.pinimg.com/originals/cf/c5/59/cfc559ab199e69cf6c29ca8a4fb9f384.jpg);
     background-position: center top;
   }
 
   .hero-content {
-  color: #fff;
-  position: relative;
-  text-align: center;
-  text-transform: uppercase;
-  top: 10%;
-  transform: translate(0, -10%);
-}
-.hero-content h1 {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 7vw;
-  margin-bottom: 0.25em;
-}
-.hero-content .social-link {
-  background-color: rgba(255, 255, 255, 0.8);
-  color: #557c83;
-}
-.hero-content .social-link:hover {
-  background-color: #000;
-  color: #fff;
-}
+    color: #fff;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    top: 10%;
+    transform: translate(0, -10%);
+  }
+
+  .hero-content h1 {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 7vw;
+    margin-bottom: 0.25em;
+  }
+
+  .hero-content .social-link {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #557c83;
+  }
+
+  .hero-content .social-link:hover {
+    background-color: #000;
+    color: #fff;
+  }
 
   /* #endregion*/
 
@@ -201,6 +226,36 @@
 
   /* #endregion */
 
+  /* #region HOMEPAGE*/
+  .home-section {
+    margin: 6rem auto;
+    max-width: 980px;
+    width: 90vw;
+  }
+
+  .home-section h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .home-callout {
+    background-color: #000;
+    color: #fff;
+    padding: 7vh 0;
+  }
+
+  .callout-title {
+    font-size: 5.75vw;
+    text-align: right;
+    text-transform: uppercase;
+  }
+
+  .callout-copy {
+    font-size: 0.8rem;
+  }
+
+  /* #endregion*/
+
   /* #region BIO WRAPPER*/
   .bio-wrapper {
     font-size: 24px;
@@ -211,15 +266,14 @@
 
   /* #endregion */
 
-  /* #region BIO BOX */
+  /* #region BIO BOX*/
   .bio-box {
-    border: 1px solid black;
     box-sizing: border-box;
     float: left;
     font-size: 1rem;
-    margin: 40px 1% 0;
-    padding: 2%;
-    width: 23%;
+    margin: 6rem 0 0;
+    padding: 0 3%;
+    width: 33%;
   }
 
   .bio-box h3 {
@@ -227,18 +281,23 @@
     font-size: 1.5em;
     margin: -40px 0 1em;
     text-align: center;
+    text-transform: uppercase;
   }
 
   .bio-box img {
     width: 100%;
   }
 
+  .bio-box .social-link {
+    display: block;
+    margin: 2em auto 1em;
+  }
+
   /* #endregion */
 
-  /* #region BIO COPY   */
+  /* #region BIO COPY*/
   .bio-copy {
-    font-size: 1em;
-    line-height: 1.5;
+    font-size: 0.75em;
   }
 
   .bio-copy a {
@@ -255,6 +314,7 @@
   }
 
   .footer-logo img {
+    background-image: url(https://avatars1.githubusercontent.com/u/15115283?s=200&v=4);
     width: 50px;
   }
 
@@ -299,9 +359,7 @@
       <li><a href="#">Nav 3</a></li>
     </ul>
   </nav>
-  <a href="/" class="header-logo">
-    <img src="/workspaces/sample_website/logo.png" alt="Learn-Enough">
-  </a>
+  <a href="/" class="header-logo"></a>
 </header>
 <!-- #endregion -->
 
@@ -427,22 +485,6 @@
     </div>
   </div>
   <!--#endregion-->
-
-  <!--#region BACKGROUND-->
-  <h3>Background</h3>
-  <p>
-    Learn Enough to Be Dangerous is an outgrowth of the
-    <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a> and the
-    <a href="https://www.softcover.io/">Softcover publishing platform</a>.
-    This page is part of the sample site for
-    <a href="https://learnenough.com/css-tutorial"><em>Learn Enough CSS and
-        Layout to Be Dangerous</em></a>, which teaches the basics of
-    <strong>C</strong>ascading <strong>S</strong>tyle
-    <strong>S</strong>heets, the language that allows web pages to be styled.
-    Other related tutorials can be found at
-    <a href="https://learnenough.com/">learnenough.com</a>.
-  </p>
-  <!-- #endregion -->
 
   <!--#region Footer-->
   <footer class="footer">
