@@ -129,7 +129,8 @@
     /* #endregion*/
 
     /* #region CONTENT CONTAINER*/
-    .containt-container {
+    .content-container {
+        color: black;
         display: flex;
         flex: 1 1 auto;
         padding-top: 10vh;
@@ -163,6 +164,53 @@
 
     .col-three .col-aside {
         flex: 0 1 20em;
+    }
+
+    /* #endregion*/
+
+    /* #region GALLERY STYLES */
+    .gallery-thumbs {
+        height: 90vh;
+        overflow: scroll;
+    }
+
+    .gallery-thumbs>div {
+        cursor: pointer;
+    }
+
+    .gallery-thumbs img {
+        box-sizing: border-box;
+        box-shadow: 0 0 0 5px transparent;
+        display: inline-block;
+        margin: 0 0 10px;
+        opacity: 0.5;
+        transition: all 0.5s ease-in-out;
+        width: 100%;
+    }
+
+    .gallery-thumbs img:hover {
+        opacity: 1;
+    }
+
+    .gallery-thumbs .current img {
+        box-shadow: 0 0 0 5px #ed6e2f;
+        opacity: 1;
+    }
+
+    .gallery-photo {
+        position: relative;
+    }
+
+    .gallery-photo img {
+        width: 100%;
+    }
+
+    .gallery-info {
+        font-size: 0.8rem;
+    }
+
+    .gallery-info h3 {
+        margin-bottom: 1em;
     }
 
     /* #endregion*/
@@ -226,39 +274,53 @@
 
 <body>
     <!-- #region FLEXBOX CONTRAINER-->
-    <div class="full-hero">
-        <div class="content-contrainer">
-            <div class="gallery col-three">
-                <div class="col col-nav">
-                    I'm the nav
-                </div>
-                <div class="col col-content">
-                    I'm the 3col page!
-                </div>
-                <div class="col col-aside">
-                    I'm over on the right
+    <div class="home">
+        <div class="full-hero hero-home">
+            <div class="content-container">
+                <div class="gallery col-three">
+                    <div class="col col-nav gallery-thumbs" id="gallery-thumbs">
+                        <div class="current">
+                            <img src="https://www.publicdomainpictures.net/pictures/280000/velka/yellow-flower-1537958992VLR.jpg"
+                                alt="Image title 1">
+                        </div>
+                        <div>
+                            <img src="https://www.publicdomainpictures.net/pictures/280000/velka/yellow-flower-1537958992VLR.jpg"
+                                alt="Image title 2">
+                        </div>
+                    </div>
+                    <div class="col col-content">
+                        <div class="gallery-photo" id="gallery-photo">
+                            <img src="https://www.publicdomainpictures.net/pictures/280000/velka/yellow-flower-1537958992VLR.jpg"
+                                alt="Image title 1">
+                        </div>
+                    </div>
+                    <div class="col col-aside gallery-info" id="gallery-info">
+                        <h3>Image Title 1</h3>
+                        <p>Image description 1</p>
+                    </div>
+
                 </div>
             </div>
+            <!-- #endregion-->
+
+            <!--#region Footer-->
+            <footer class="footer">
+                <a class="footer-logo" href="/">
+                    <img src="/images/logo.png" alt="Learn Enough" />
+                </a>
+                <nav>
+                    <ul class="footer-nav nav-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Nav 2</a></li>
+                        <li><a href="#">Nav 3</a></li>
+                    </ul>
+                </nav>
+                <h3>Learn Enough <span>to Be Dangerous</span></h3>
+            </footer>
+            <!-- #endregion -->
         </div>
     </div>
-    <!-- #endregion-->
-
-    <!--#region Footer-->
-    <footer class="footer">
-        <a class="footer-logo" href="/">
-            <img src="/images/logo.png" alt="Learn Enough" />
-        </a>
-        <nav>
-            <ul class="footer-nav nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Nav 2</a></li>
-                <li><a href="#">Nav 3</a></li>
-            </ul>
-        </nav>
-        <h3>Learn Enough <span>to Be Dangerous</span></h3>
-    </footer>
-    <!-- #endregion -->
 </body>
 
 </html>
