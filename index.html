@@ -25,6 +25,7 @@
 
   p {
     line-height: 1.5;
+    margin: 0.75em 0;
   }
 
   h2~p {
@@ -226,6 +227,37 @@
 
   /* #endregion */
 
+  /* #region CALLOUT STYLES*/
+  .home-callout {
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    padding: 7vh 0;
+  }
+
+  .home-callout h3 {
+    color: inherit;
+    margin-top: 1em;
+  }
+
+  .callout-title {
+    flex-basis: 0;
+    flex-grow: 1;
+    font-size: 5.75vw;
+    text-align: right;
+    text-transform: uppercase;
+  }
+
+  .callout-copy {
+    flex-basis: 45em;
+    flex-shrink: 0;
+    font-size: 0.8rem;
+    padding: 0 3vw;
+  }
+
+  /* #endregion*/
+
   /* #region HOMEPAGE*/
   .home-section {
     margin: 6rem auto;
@@ -245,12 +277,15 @@
   }
 
   .callout-title {
+    flex: 1;
+    color: #fff;
     font-size: 5.75vw;
     text-align: right;
     text-transform: uppercase;
   }
 
   .callout-copy {
+    flex: 0 0 45em;
     font-size: 0.8rem;
   }
 
@@ -354,7 +389,7 @@
   <nav>
     <ul class="header-nav">
       <li><a href="/">Home</a></li>
-      <li><a href="https://jacobhuppertz.github.io/Test/Nav1">Nav 1</a></li>
+      <li><a href="https://jacobhuppertz.github.io/Test/Nav1">Gallery</a></li>
       <li><a href="#">Nav 2</a></li>
       <li><a href="#">Nav 3</a></li>
     </ul>
@@ -494,7 +529,7 @@
     <nav>
       <ul class="footer-nav nav-links">
         <li><a href="/">Home</a></li>
-        <li><a href="#">Nav 1</a></li>
+        <li><a href="#">Gallery</a></li>
         <li><a href="#">Nav 2</a></li>
         <li><a href="#">Nav 3</a></li>
       </ul>
