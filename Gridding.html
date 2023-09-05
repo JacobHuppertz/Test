@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <style>
     /* #region GLOBAL STYLES*/
     html {
@@ -51,9 +52,9 @@
     .header {
         background-color: #000;
         color: #fff;
-        position: fixed;
+        position: relative;
         width: 100%;
-        z-index: 20;
+        z-index: 0;
     }
 
     /* #endregion */
@@ -82,11 +83,11 @@
         color: #ed6e2f;
     }
 
-    .header-nav>li:nth-child(3) a {
+    .header-nav>li:nth-child(4) a {
         color: #ed6e2f;
     }
 
-    .header-nav>li:nth-child(3) a:hover {
+    .header-nav>li:nth-child(4) a:hover {
         color: #fff;
     }
 
@@ -122,99 +123,16 @@
 
     /* #endregion */
 
-    /* #region BLOG STYLES*/
-    .blog-recent {
-        text-align: right;
+    /* #region GRID STYLES*/
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 15em;
+        grid-gap: 1em;
     }
 
-    .blog-title-list {
-        list-style: none;
-        padding: 0;
-    }
-
-    .blog-title-list li~li {
-        margin-top: 1.5em;
-    }
-
-    .blog-title-list span {
-        color: #999;
-        display: block;
-        font-size: 0.8em;
-        font-style: italic;
-        margin-top: 0.5em;
-    }
-
-    .blog-posts~.blog-posts {
-        border-top: 1px dotted rgba(0, 0, 0, 0.1);
-        margin-top: 4em;
-        padding-top: 4em;
-    }
-
-    .blog-posts .post-header {
-        font-size: 0.8rem;
-    }
-
-    .post-header {
-        margin-bottom: 1.5em;
-    }
-
-    .post-header img,
-    .post-header .social-link {
-        margin-right: 0.5em;
-    }
-
-    .post-header img {
-        border-radius: 99px;
-        display: inline-block;
-        height: 2.5em;
-        vertical-align: middle;
-    }
-
-    .posts-image {
-        background-position: center;
-        background-size: cover;
-        height: 6em;
-        margin-bottom: 1.5em;
-    }
-
-    /* #endregion*/
-
-    /* #region BLOG COL STYLES*/
-    .col-two {
-        display: flex;
-    }
-
-    .col-two .col-aside {
-        flex: 0 0 20em;
-        order: 1;
-    }
-
-    .col-two .col-content {
-        flex: 1;
-    }
-
-    /* #endregion*/
-
-    /* #region PAGE STYLES*/
-
-    .page {
-        margin: 10vh auto 15vh;
-        max-width: 980px;
-        width: 85vw;
-    }
-
-    .page h1 {
-        font-size: 3em;
-        margin-bottom: 1em;
-        text-align: center;
-    }
-
-    .page h2 {
-        margin-bottom: 0.5em;
-    }
-
-    .page h4 {
-        margin-bottom: 1em;
+    .grid>div {
+        border: 1px solid #000;
     }
 
     /* #endregion*/
@@ -278,38 +196,34 @@
 
 <body>
 
-    <div class="page blog-index">
-        <h1>Bloggie Blog</h1>
-        <div class="col-two blog-cols">
-            <div class="col col-aside blog-recent">
-                <h4>Recent Posts</h4>
-                <ul class="blog-title-list">
-                    <li>
-                        <a href="">Blog post title</a>
-                        <span>Posted: Month Day, Year</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="col col-content blog-previews">
-                <div class="blog-posts">
-                    <header class="post-header">
-                        <h2><a href="">I am the title of an article</a></h2>
-                        <div class="post-byline">
-                            <img src="https://gravatar.com/avatar/ffda7d145b83c4b118f982401f962ca6?s=150">
-                            <a href="#" class="social-link">Tw</a>
-                            by: Me, Myself, and I
-                            <span> - Month Day, year</span>
-                        </div>
-                    </header>
-                    <div class="posts-image" style="background-image:url('/images/shark.jpg')">
-                    </div>
-                    <p>
-                        Blurb
-                    </p>
-                </div>
-            </div>
+    <!-- #region GRID-->
+    <div class="grid">
+        <div>
+            1
+        </div>
+        <div>
+            2
+        </div>
+        <div>
+            3
+        </div>
+        <div>
+            4
+        </div>
+        <div>
+            5
+        </div>
+        <div>
+            6
+        </div>
+        <div>
+            7
+        </div>
+        <div>
+            8
         </div>
     </div>
+    <!-- #endregion-->
 
     <!--#region Footer-->
     <footer class="footer">
@@ -326,7 +240,7 @@
         </nav>
         <h3>Learn Enough <span>to Be Dangerous</span></h3>
     </footer>
+    <!-- #endregion -->
 </body>
-<!-- #endregion -->
 
 </html>
